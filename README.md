@@ -135,12 +135,12 @@ AVION VISUAL INTELLIGENCE/
       - **Tier 02: Operational Workflow** (35mm cinema dynamic range, specialists in motion).
       - **Tier 03: Monumental Topography** (400ft AGL UAV drone, geographic context).
     - Mouse-hover and click switching with smooth optical crossfades.
-11. **Technical Production Standards (Studio Repertoire)**:
-    - 4 technical pillars:
-      - Large-Format Monochrome Cine (16+ stops dynamic range, anamorphic primes).
-      - Licensed Aerial UAV Drone Fleet (CAA/FAA certified, heavy-lift & micro platforms).
-      - Ambisonic Acoustic Sound Architecture (field binaural & contact microphones).
-      - 12-Bit ACES Log Color & Multi-Ratio Master Archiving.
+11. **Visual Scripting Architecture (Strategic Narrative Systems)**:
+    - 4 core methodologies of the visual scripting discipline:
+      - Structural Deconstruction (isolating causal steps & core ideas).
+      - Narrative Blueprints (architectural schematic of pacing, visual metaphors, and camera logic).
+      - Stakeholder Context (translating technical density for key decision-makers).
+      - Blueprint-Led Production (governing plan connecting capture to final delivery).
 12. **About Avion**:
     - Honest, factual studio manifesto.
     - Zero fabricated awards, client lists, or fake team rosters.
