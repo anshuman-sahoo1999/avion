@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVION VISUAL INTELLIGENCE — Strategy, Story &amp; Production</title>
+  <meta name="description"
+    content="Avion Visual Intelligence is a visual communication studio combining strategic thinking, storytelling, film, photography, aerial visuals, and post-production.">
+  <meta name="theme-color" content="#111111">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AVION VISUAL INTELLIGENCE">
+  <meta property="og:description"
+    content="Make complex work easier to understand through strategic film, photography, and aerial visuals.">
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Google Fonts: Inter & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Accessible Skip to Content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- 1px Reading Progress Bar -->
+  <div id="reading-progress-bar" class="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- 35mm Analog Film Grain Texture Overlay -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- Swiss Architectural Grid Guides -->
+  <div class="grid-guides" aria-hidden="true">
+    <div class="grid-guide-line"></div>
+    <div class="grid-guide-line"></div>
+    <div class="grid-guide-line"></div>
+    <div class="grid-guide-line"></div>
+  </div>
+
+  <!-- Desktop Custom Contextual Cursor -->
+  <div class="custom-cursor" aria-hidden="true">
+    <span class="cursor-label">VIEW</span>
+  </div>
+
+  <!-- Floating Toast Notification -->
+  <div id="toast-notification" class="toast-notification" role="status" aria-live="polite"></div>
+
+  <!-- Fullscreen Image Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image Inspection View">
+    <div class="lightbox-header">
+      <span id="lightbox-caption">Plate Inspection</span>
+      <button id="lightbox-close-btn" class="lightbox-close-btn" aria-label="Close Lightbox">
+        <span>Close [ESC]</span>
+      </button>
+    </div>
+    <div class="lightbox-viewport">
+      <img id="lightbox-img" src="" alt="Fullscreen inspectable view" class="lightbox-img">
+    </div>
+    <div class="lightbox-footer">
+      <span id="lightbox-meta">35mm Monochrome Master</span>
+      <span>Avion Visual Archive</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GLOBAL SITE HEADER
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+
+      <!-- Studio Brand / Logo -->
+      <a href="#hero" class="brand" aria-label="Avion Visual Intelligence Home">
+        <img src="assets/images/logo-dark.png"
+          srcset="assets/images/logo-dark.png 1x, assets/images/logo-dark@2x.png 2x" alt="Avion Visual Intelligence"
+          class="brand__logo" width="156" height="100" loading="eager" decoding="async">
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="#hero" class="nav-desktop__link is-active">Home</a>
+        <a href="#how-we-think" class="nav-desktop__link">How We Think</a>
+        <a href="#capabilities" class="nav-desktop__link">Capabilities</a>
+        <a href="#spatial-archive" class="nav-desktop__link">Archive</a>
+        <a href="#about" class="nav-desktop__link">About</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="#enquiry" class="btn btn-primary header-cta">
+          <span>Start a Project</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-drawer"
+          aria-label="Toggle navigation menu">
+          <span class="mobile-toggle__line"></span>
+          <span class="mobile-toggle__line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <nav class="mobile-nav" aria-label="Mobile Navigation Links">
+      <ul class="mobile-nav__list">
+        <li>
+          <a href="#hero" class="mobile-nav__link">
+            <span class="mobile-nav__num">01</span>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="#how-we-think" class="mobile-nav__link">
+            <span class="mobile-nav__num">02</span>
+            <span>How We Think</span>
+          </a>
+        </li>
+        <li>
+          <a href="#capabilities" class="mobile-nav__link">
+            <span class="mobile-nav__num">03</span>
+            <span>Capabilities</span>
+          </a>
+        </li>
+        <li>
+          <a href="#spatial-archive" class="mobile-nav__link">
+            <span class="mobile-nav__num">04</span>
+            <span>Spatial Archive</span>
+          </a>
+        </li>
+        <li>
+          <a href="#about" class="mobile-nav__link">
+            <span class="mobile-nav__num">05</span>
+            <span>About Avion</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mobile-drawer__footer">
+      <a href="#enquiry" class="btn btn-primary" style="width: 100%;">
+        <span>Start a Project</span>
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+      <div class="mobile-drawer__meta">
+        <span>Avion Visual Intelligence — Studio</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================== -->
+  <main id="main-content">
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero">
+      <div class="section-watermark">01</div>
+      <div class="site-container">
+        <div class="hero__grid">
+
+          <div class="hero__content reveal-on-scroll">
+            <div class="hero__tagline-group">
+              <span class="category-tag">Studio &amp; Production — Strategy / Film / Photography / Aerial</span>
+            </div>
+            <h1 class="editorial-headline">
+              Make complex work <span class="italic-accent">easier to understand.</span>
+            </h1>
+            <p class="hero__subheadline">
+              Every project has a story. We help organisations work out which parts matter, then communicate them
+              clearly through film, photography and aerial visuals.
+            </p>
+            <div class="hero__actions">
+              <a href="#enquiry" class="btn btn-primary">
+                <span>Discuss a Project</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#how-we-think" class="btn btn-secondary">
+                <span>How We Think</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Cinematic Media Frame -->
+          <div class="hero__media reveal-on-scroll delay-200">
+            <div class="hero__frame ratio-cinema" data-inspectable
+              data-caption="Architectural Tower Elevation — Structural Geometry"
+              data-meta="35mm Monochromatic Perspective / ISO 100">
+              <!-- Optical Corner Reticles -->
+              <span class="corner-reticle reticle-tl"></span>
+              <span class="corner-reticle reticle-tr"></span>
+              <span class="corner-reticle reticle-bl"></span>
+              <span class="corner-reticle reticle-br"></span>
+
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80"
+                alt="Architectural structure reaching upward in high-contrast monochrome perspective"
+                class="hero__image" width="1600" height="1000" onerror="this.src='assets/images/fallback.svg'">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Footer Status Bar -->
+        <div class="hero__footer reveal-on-scroll delay-300">
+          <div class="hero__scroll-indicator">
+            <span>Scroll to Explore</span>
+            <div class="scroll-line" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SECTION: THE THINKING BEHIND THE IMAGE -->
+    <section id="philosophy" class="site-section site-section--border-bottom">
+      <div class="section-watermark">02</div>
+      <div class="site-container">
+        <div class="split-editorial">
+
+          <div class="split-editorial__content reveal-on-scroll">
+            <span class="category-tag">01 / Foundation</span>
+            <h2 class="section-headline split-editorial__headline">
+              The camera is not where the story begins.
+            </h2>
+            <div class="split-editorial__body">
+              <p>
+                A construction site is more than a location. A production process is more than a sequence of steps.
+                Behind every subject are decisions, people and ideas worth understanding.
+              </p>
+              <p>
+                The challenge isn’t to record what exists. It’s to decide what’s worth communicating, and how.
+              </p>
+              <p class="emphasis">
+                That’s where Avion begins.
+              </p>
+            </div>
+          </div>
+
+          <div class="split-editorial__media reveal-on-scroll delay-200">
+            <div class="split-editorial__frame" data-inspectable
+              data-caption="Structural Construction Progression — The Engineering Method"
+              data-meta="Heavy Infrastructure Site / Field Capture">
+              <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80"
+                alt="Structural construction steelwork and geometry in black and white" class="split-editorial__image"
+                loading="lazy" decoding="async" width="1200" height="1500"
+                onerror="this.src='assets/images/fallback.svg'">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SECTION: OUR PROCESS (5-STAGE CINEMATIC TIMELINE) -->
+    <section id="process" class="site-section site-section--border-bottom">
+      <div class="section-watermark">03</div>
+      <div class="site-container">
+
+        <div class="process-header reveal-on-scroll">
+          <span class="category-tag">02 / Methodology</span>
+          <h2 class="section-headline">
+            We start with the question, not the frame.
+          </h2>
+        </div>
+
+        <!-- 5-Stage Interactive Timeline Navigation -->
+        <div class="process-timeline" role="tablist" aria-label="Avion Production Stages">
+          <div class="process-timeline-track">
+
+            <!-- Step 01 -->
+            <div class="process-step is-active" role="tab" tabindex="0" aria-selected="true" data-step-index="0">
+              <div class="process-step__indicator" aria-hidden="true"></div>
+              <div class="process-step__number">01</div>
+              <h3 class="process-step__title">UNDERSTAND</h3>
+              <p class="process-step__desc">
+                What needs to be communicated, to whom, and what should they remember?
+              </p>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="process-step" role="tab" tabindex="0" aria-selected="false" data-step-index="1">
+              <div class="process-step__indicator" aria-hidden="true"></div>
+              <div class="process-step__number">02</div>
+              <h3 class="process-step__title">PLAN</h3>
+              <p class="process-step__desc">
+                We settle the central message, then build the script, structure and visual approach before anyone picks
+                up a camera.
+              </p>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="process-step" role="tab" tabindex="0" aria-selected="false" data-step-index="2">
+              <div class="process-step__indicator" aria-hidden="true"></div>
+              <div class="process-step__number">03</div>
+              <h3 class="process-step__title">CAPTURE</h3>
+              <p class="process-step__desc">
+                Purposeful filming, photography and aerial visuals, shot to the plan.
+              </p>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="process-step" role="tab" tabindex="0" aria-selected="false" data-step-index="3">
+              <div class="process-step__indicator" aria-hidden="true"></div>
+              <div class="process-step__number">04</div>
+              <h3 class="process-step__title">EDIT</h3>
+              <p class="process-step__desc">
+                We shape the footage into a coherent story, with attention to pacing, context and clarity.
+              </p>
+            </div>
+
+            <!-- Step 05 -->
+            <div class="process-step" role="tab" tabindex="0" aria-selected="false" data-step-index="4">
+              <div class="process-step__indicator" aria-hidden="true"></div>
+              <div class="process-step__number">05</div>
+              <h3 class="process-step__title">DELIVER</h3>
+              <p class="process-step__desc">
+                Final assets prepared for where they’ll be used and who will see them.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Dynamic Process Highlight Stage Card with Dynamic Cinema Split -->
+        <div class="process-active-panel reveal-on-scroll" aria-live="polite">
+          <div class="process-active-panel__content">
+            <div>
+              <span class="process-active-panel__badge" id="active-step-num">01 / 05</span>
+              <h3 class="process-active-panel__heading" id="active-step-title">UNDERSTAND</h3>
+              <p class="process-active-panel__statement" id="active-step-statement">
+                “What needs to be communicated, to whom, and what should they remember?”
+              </p>
+            </div>
+
+            <div class="process-active-panel__meta">
+              <div class="meta-row">
+                <span class="meta-row__label">Key Output</span>
+                <span class="meta-row__value" id="active-step-deliverable">Communication Brief &amp; Core Anchor</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-row__label">Studio Focus</span>
+                <span class="meta-row__value" id="active-step-perspective">Audience Perception Analysis</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Process Visual Frame -->
+          <div class="process-active-panel__media" data-inspectable data-caption="Process Field Record"
+            data-meta="Studio Phase Archive">
+            <img id="process-preview-image"
+              src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80"
+              alt="Process Phase Visual Record" class="process-preview-img" loading="lazy" decoding="async"
+              onerror="this.src='assets/images/fallback.svg'">
+            <div class="process-preview-badge" id="process-preview-badge">Plate 01 // Research &amp; Narrative Notebook
+            </div>
+          </div>
+        </div>
+
+        <!-- Closing Process Philosophy Line -->
+        <div class="process-closing reveal-on-scroll">
+          <blockquote class="process-closing__quote">
+            “Every creative decision serves a reason.”
+          </blockquote>
+          <span class="process-closing__sub">Avion Principle</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. SECTION: WHAT WE HELP COMMUNICATE (6 ASYMMETRIC BLOCKS) -->
+    <section id="focus-areas" class="site-section site-section--secondary site-section--border-bottom">
+      <div class="section-watermark">04</div>
+      <div class="site-container">
+
+        <div class="focus-header reveal-on-scroll">
+          <span class="category-tag">03 / Communication Challenges</span>
+          <h2 class="section-headline">
+            Different challenges. Different stories.
+          </h2>
+          <p class="lead-text" style="margin-top: 1.25rem;">
+            The starting point is never the format. It’s the communication challenge.
+          </p>
+        </div>
+
+        <!-- 6 Editorial Cards with Asymmetric Grid -->
+        <div class="focus-grid">
+
+          <!-- Block 1 -->
+          <article class="focus-card reveal-on-scroll">
+            <div class="focus-card__media" data-inspectable
+              data-caption="Explain Something Complex — Precision Industrial Automation"
+              data-meta="Robotics &amp; Mechanical Systems">
+              <span class="focus-card__badge">01</span>
+              <span class="focus-card__inspect-pill">⤢ Inspect Plate</span>
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80"
+                alt="Precision industrial automation robotics and mechanical systems" class="focus-card__img"
+                loading="lazy" decoding="async" width="800" height="550"
+                onerror="this.src='assets/images/fallback.svg'">
+            </div>
+            <div class="focus-card__content">
+              <span class="focus-card__number">CASE TYPE 01</span>
+              <h3 class="focus-card__title">EXPLAIN SOMETHING COMPLEX</h3>
+              <p class="focus-card__desc">
+                Make technical systems and processes easy to follow.
+              </p>
+              <div class="focus-card__footer">
+                <span>Clarity &amp; Architecture</span>
+                <svg class="focus-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Block 2 -->
+          <article class="focus-card reveal-on-scroll delay-100">
+            <div class="focus-card__media" data-inspectable
+              data-caption="Bring an Idea to Life — Architectural Blueprint Development"
+              data-meta="Design Conceptualization">
+              <span class="focus-card__badge">02</span>
+              <span class="focus-card__inspect-pill">⤢ Inspect Plate</span>
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
+                alt="Architectural concept blueprint and dimensional development" class="focus-card__img" loading="lazy"
+                decoding="async" width="800" height="550" onerror="this.src='assets/images/fallback.svg'">
+            </div>
+            <div class="focus-card__content">
+              <span class="focus-card__number">CASE TYPE 02</span>
+              <h3 class="focus-card__title">BRING AN IDEA TO LIFE</h3>
+              <p class="focus-card__desc">
+                Turn a concept or proposal into a visual narrative.
+              </p>
+              <div class="focus-card__footer">
+                <span>Concept &amp; Narrative</span>
+                <svg class="focus-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Block 3 -->
+          <article class="focus-card reveal-on-scroll delay-200">
+            <div class="focus-card__media" data-inspectable
+              data-caption="Show What’s Behind the Work — Metal Fabrication &amp; Human Craft"
+              data-meta="Industrial Labor Documentation">
+              <span class="focus-card__badge">03</span>
+              <span class="focus-card__inspect-pill">⤢ Inspect Plate</span>
+              <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
+                alt="Artisan metal fabrication craftsman working in industrial facility" class="focus-card__img"
+                loading="lazy" decoding="async" width="800" height="550"
+                onerror="this.src='assets/images/fallback.svg'">
+            </div>
+            <div class="focus-card__content">
+              <span class="focus-card__number">CASE TYPE 03</span>
+              <h3 class="focus-card__title">SHOW WHAT’S BEHIND THE WORK</h3>
+              <p class="focus-card__desc">
+                Reveal the people, decisions and methods that the final result hides.
+              </p>
+              <div class="focus-card__footer">
+                <span>Human Process &amp; Craft</span>
+                <svg class="focus-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Block 4 -->
+          <article class="focus-card reveal-on-scroll">
+            <div class="focus-card__media" data-inspectable
+              data-caption="Build a Stronger Brand Story — Cable Stay Bridge Engineering"
+              data-meta="Monumental Identity Architecture">
+              <span class="focus-card__badge">04</span>
+              <span class="focus-card__inspect-pill">⤢ Inspect Plate</span>
+              <img src="https://images.unsplash.com/photo-1470723710355-95304d8aece4?auto=format&fit=crop&w=800&q=80"
+                alt="Dramatic monochrome cable stay bridge engineering perspective" class="focus-card__img"
+                loading="lazy" decoding="async" width="800" height="550"
+                onerror="this.src='assets/images/fallback.svg'">
+            </div>
+            <div class="focus-card__content">
+              <span class="focus-card__number">CASE TYPE 04</span>
+              <h3 class="focus-card__title">BUILD A STRONGER BRAND STORY</h3>
+              <p class="focus-card__desc">
+                Show what you stand for and why your work matters.
+              </p>
+              <div class="focus-card__footer">
+                <span>Identity &amp; Purpose</span>
+                <svg class="focus-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Block 5 -->
+          <article class="focus-card reveal-on-scroll delay-100">
+            <div class="focus-card__media" data-inspectable
+              data-caption="Document Progress and Change — High-Elevation Spatial Grid"
+              data-meta="Aerial Infrastructure Survey">
+              <span class="focus-card__badge">05</span>
+              <span class="focus-card__inspect-pill">⤢ Inspect Plate</span>
+              <img src="https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&fit=crop&w=800&q=80"
+                alt="Geometric high-altitude aerial perspective of urban infrastructure" class="focus-card__img"
+                loading="lazy" decoding="async" width="800" height="550"
+                onerror="this.src='assets/images/fallback.svg'">
+            </div>
+            <div class="focus-card__content">
+              <span class="focus-card__number">CASE TYPE 05</span>
+              <h3 class="focus-card__title">DOCUMENT PROGRESS AND CHANGE</h3>
+              <p class="focus-card__desc">
+                Keep a meaningful visual record of milestones and transformation.
+              </p>
+              <div class="focus-card__footer">
+                <span>Milestones &amp; Archival</span>
+                <svg class="focus-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Block 6 -->
+          <article class="focus-card reveal-on-scroll delay-200">
+            <div class="focus-card__media" data-inspectable
+              data-caption="Leave a Lasting Impression — Architectural Chiaroscuro"
+              data-meta="Monochrome Light &amp; Form">
+              <span class="focus-card__badge">06</span>
+              <span class="focus-card__inspect-pill">⤢ Inspect Plate</span>
+              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80"
+                alt="High-contrast architectural shadow and timeless concrete geometry" class="focus-card__img"
+                loading="lazy" decoding="async" width="800" height="550"
+                onerror="this.src='assets/images/fallback.svg'">
+            </div>
+            <div class="focus-card__content">
+              <span class="focus-card__number">CASE TYPE 06</span>
+              <h3 class="focus-card__title">LEAVE A LASTING IMPRESSION</h3>
+              <p class="focus-card__desc">
+                Create visuals that stay with people and outlive a single moment.
+              </p>
+              <div class="focus-card__footer">
+                <span>Resonance &amp; Legacy</span>
+                <svg class="focus-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SECTION: STRATEGY BEFORE PRODUCTION (HIGH DRAMA EDITORIAL) -->
+    <section id="strategy" class="site-section dark-section">
+      <div class="section-watermark">05</div>
+      <div class="site-container">
+        <div class="strategy-grid">
+
+          <div class="strategy-content reveal-on-scroll">
+            <span class="category-tag category-tag--inverse">04 / Creative Work</span>
+            <h2 class="section-headline strategy-headline">
+              The plan is part of the final product.
+            </h2>
+            <p class="strategy-copy">
+              The best visual projects are decided before the shoot. What is the real story? What must the audience
+              understand by the end? Research, narrative and scripting aren’t admin before the creative work. They are
+              the creative work.
+            </p>
+          </div>
+
+          <div class="strategy-media reveal-on-scroll delay-200">
+            <div class="strategy-frame" data-inspectable data-caption="Pre-Production Blueprint Environment"
+              data-meta="Studio Planning Architecture">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+                alt="Architectural studio interior with minimalist precision and light" class="strategy-image"
+                loading="lazy" decoding="async" width="1200" height="750"
+                onerror="this.src='assets/images/fallback.svg'">
+              <div class="strategy-stamp">Pre-Production Architecture</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SECTION: SELECTED SPATIAL ARCHIVE (INTERACTIVE 35MM FILM STRIP) -->
+    <section id="spatial-archive" class="film-strip-section">
+      <div class="section-watermark">06</div>
+      <div class="site-container">
+        <div class="film-strip-header reveal-on-scroll">
+          <span class="category-tag category-tag--inverse">05 / Spatial Archival Contact Sheet</span>
+          <h2 class="section-headline" style="color: #FFFFFF;">
+            Spatial perspectives. Captured to communicate.
+          </h2>
+          <p class="lead-text" style="color: var(--text-inverse-muted); margin-top: 1.25rem;">
+            An ongoing monochrome film archive documenting the scale, craft, and complexity of human endeavor.
+          </p>
+        </div>
+      </div>
+
+      <!-- Kinetic Mouse-Movement-Scrubbed Film Viewport -->
+      <div id="film-strip-viewport" class="film-strip-viewport" role="region" aria-label="Interactive 35mm Film Strip">
+        <div id="film-strip-track" class="film-strip-track">
+
+          <!-- Frame 01 -->
+          <div class="film-strip-item" data-inspectable
+            data-caption="Turbine Hydro-Engineering &amp; Precision Assemblies"
+            data-meta="TC: 00:01:24:18 // LENS: 24MM T1.5">
+            <div class="film-strip-header-bar">
+              <span>TC: 00:01:24:18</span>
+              <span>PLATE 01 / 06</span>
+            </div>
+            <div class="film-strip-media">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80"
+                alt="Precision hydraulic turbine manufacturing" class="film-strip-img" loading="lazy" decoding="async">
+            </div>
+            <div class="film-strip-footer-bar">
+              <h3 class="film-strip-title">Turbine Assembly</h3>
+              <span class="film-strip-sub">Macro Industrial Mechanics</span>
+            </div>
+          </div>
+
+          <!-- Frame 02 -->
+          <div class="film-strip-item" data-inspectable
+            data-caption="Suspension Bridge Cable Anchors &amp; River Geometry"
+            data-meta="TC: 00:02:45:12 // LENS: 50MM ANAMORPHIC">
+            <div class="film-strip-header-bar">
+              <span>TC: 00:02:45:12</span>
+              <span>PLATE 02 / 06</span>
+            </div>
+            <div class="film-strip-media">
+              <img src="https://images.unsplash.com/photo-1470723710355-95304d8aece4?auto=format&fit=crop&w=1000&q=80"
+                alt="Suspension bridge engineering" class="film-strip-img" loading="lazy" decoding="async">
+            </div>
+            <div class="film-strip-footer-bar">
+              <h3 class="film-strip-title">Structural Anchors</h3>
+              <span class="film-strip-sub">Infrastructural Geometry</span>
+            </div>
+          </div>
+
+          <!-- Frame 03 -->
+          <div class="film-strip-item" data-inspectable data-caption="Geothermal Columns &amp; High-Pressure Vessels"
+            data-meta="TC: 00:03:52:04 // LENS: 35MM T1.4">
+            <div class="film-strip-header-bar">
+              <span>TC: 00:03:52:04</span>
+              <span>PLATE 03 / 06</span>
+            </div>
+            <div class="film-strip-media">
+              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80"
+                alt="Geothermal energy structural columns" class="film-strip-img" loading="lazy" decoding="async">
+            </div>
+            <div class="film-strip-footer-bar">
+              <h3 class="film-strip-title">Energy Topography</h3>
+              <span class="film-strip-sub">Thermodynamic Systems</span>
+            </div>
+          </div>
+
+          <!-- Frame 04 -->
+          <div class="film-strip-item" data-inspectable data-caption="Intermodal Maritime Freight Terminal"
+            data-meta="TC: 00:04:19:22 // UAV 400FT AGL">
+            <div class="film-strip-header-bar">
+              <span>TC: 00:04:19:22</span>
+              <span>PLATE 04 / 06</span>
+            </div>
+            <div class="film-strip-media">
+              <img src="https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&fit=crop&w=1000&q=80"
+                alt="Intermodal freight terminal aerial grid" class="film-strip-img" loading="lazy" decoding="async">
+            </div>
+            <div class="film-strip-footer-bar">
+              <h3 class="film-strip-title">Intermodal Matrix</h3>
+              <span class="film-strip-sub">High-Altitude Aerial Survey</span>
+            </div>
+          </div>
+
+          <!-- Frame 05 -->
+          <div class="film-strip-item" data-inspectable data-caption="Titanium Chamber Precision Metallurgy"
+            data-meta="TC: 00:05:08:15 // MACRO 100MM F/2.8">
+            <div class="film-strip-header-bar">
+              <span>TC: 00:05:08:15</span>
+              <span>PLATE 05 / 06</span>
+            </div>
+            <div class="film-strip-media">
+              <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80"
+                alt="Specialist artisan welding" class="film-strip-img" loading="lazy" decoding="async">
+            </div>
+            <div class="film-strip-footer-bar">
+              <h3 class="film-strip-title">Thermal Craftsmanship</h3>
+              <span class="film-strip-sub">Sub-Millimeter Metallurgy</span>
+            </div>
+          </div>
+
+          <!-- Frame 06 -->
+          <div class="film-strip-item" data-inspectable data-caption="Monolithic Brutalist Facade &amp; Negative Space"
+            data-meta="TC: 00:06:33:01 // 28MM T2.0">
+            <div class="film-strip-header-bar">
+              <span>TC: 00:06:33:01</span>
+              <span>PLATE 06 / 06</span>
+            </div>
+            <div class="film-strip-media">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+                alt="Brutalist architectural lines" class="film-strip-img" loading="lazy" decoding="async">
+            </div>
+            <div class="film-strip-footer-bar">
+              <h3 class="film-strip-title">Architectural Void</h3>
+              <span class="film-strip-sub">Monolithic Light Studies</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SECTION: HOME PAGE CLOSING CTA -->
+    <section class="site-section site-section--border-bottom">
+      <div class="site-container">
+        <div class="home-cta-box reveal-on-scroll">
+          <div class="home-cta-text">
+            <span class="category-tag">Dialogue</span>
+            <h2 class="section-headline home-cta-title">
+              Have something that needs to be communicated?
+            </h2>
+            <p class="lead-text">
+              Tell us about the project and who you need to reach. We’ll work out the communication problem together.
+            </p>
+          </div>
+          <a href="#enquiry" class="btn btn-primary">
+            <span>Start a Conversation</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SECTION: HOW WE THINK -->
+    <section id="how-we-think" class="site-section site-section--border-bottom">
+      <div class="section-watermark">07</div>
+      <div class="site-container">
+
+        <div class="principles-header reveal-on-scroll">
+          <span class="category-tag">06 / Philosophy &amp; Core Principles</span>
+          <h2 class="section-headline">
+            Better visuals begin with better questions.
+          </h2>
+          <p class="lead-text" style="margin-top: 1.25rem;">
+            We start with what the communication needs to achieve, then choose the film, photographs, aerial footage or
+            mix of formats that achieves it.
+          </p>
+        </div>
+
+        <!-- 4 Principles as Editorial Rows -->
+        <div class="principles-list">
+
+          <!-- Principle 01 -->
+          <div class="principle-row reveal-on-scroll">
+            <span class="principle-number">01</span>
+            <h3 class="principle-title">PURPOSE BEFORE PRODUCTION</h3>
+            <p class="principle-body">
+              “We know why an asset exists before we decide what to make.”
+            </p>
+          </div>
+
+          <!-- Principle 02 -->
+          <div class="principle-row reveal-on-scroll delay-100">
+            <span class="principle-number">02</span>
+            <h3 class="principle-title">STORY BEFORE FOOTAGE</h3>
+            <p class="principle-body">
+              “With a central idea and structure in place, every shot has a job to do.”
+            </p>
+          </div>
+
+          <!-- Principle 03 -->
+          <div class="principle-row reveal-on-scroll delay-200">
+            <span class="principle-number">03</span>
+            <h3 class="principle-title">PLAN BEFORE SHOOT</h3>
+            <p class="principle-body">
+              “Locations, people, sequences, constraints and deliverables are considered up front.”
+            </p>
+          </div>
+
+          <!-- Principle 04 -->
+          <div class="principle-row reveal-on-scroll delay-300">
+            <span class="principle-number">04</span>
+            <h3 class="principle-title">CLARITY OVER SPECTACLE</h3>
+            <p class="principle-body">
+              “A striking image is good. One that helps people understand something is better.”
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. SECTION: CAPABILITIES -->
+    <section id="capabilities" class="site-section site-section--secondary site-section--border-bottom">
+      <div class="section-watermark">08</div>
+      <div class="site-container">
+
+        <div class="capabilities-header reveal-on-scroll">
+          <span class="category-tag">07 / Studio Services</span>
+          <h2 class="section-headline">
+            One objective. The right mix of thinking and production.
+          </h2>
+        </div>
+
+        <!-- 5 Interactive Expandable Capability Accordions -->
+        <div class="capabilities-accordion">
+
+          <!-- Capability 1 -->
+          <div class="capability-item is-expanded">
+            <button class="capability-header" aria-expanded="true">
+              <div class="capability-header__left">
+                <span class="capability-index">01</span>
+                <span class="capability-title">COMMUNICATION STRATEGY AND SCRIPTING</span>
+              </div>
+              <svg class="capability-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="capability-body">
+              <div class="capability-body__inner">
+                <div class="capability-detail-grid">
+                  <div>
+                    <p class="capability-summary">
+                      Defining the objective, audience and message, then turning a complex subject into a clear
+                      narrative and production script.
+                    </p>
+                  </div>
+                  <div class="deliverables-list">
+                    <span class="mono-label"
+                      style="color: var(--text-muted); margin-bottom: 0.25rem;">Deliverables</span>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Narrative Frameworks</div>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Production Scripts &amp;
+                      Interview Guides</div>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Audience Perception Strategy
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Capability 2 -->
+          <div class="capability-item">
+            <button class="capability-header" aria-expanded="false">
+              <div class="capability-header__left">
+                <span class="capability-index">02</span>
+                <span class="capability-title">PRODUCTION PLANNING</span>
+              </div>
+              <svg class="capability-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="capability-body">
+              <div class="capability-body__inner">
+                <div class="capability-detail-grid">
+                  <div>
+                    <p class="capability-summary">
+                      Translating the creative direction into a practical plan for locations, shots, sequences and
+                      resources.
+                    </p>
+                  </div>
+                  <div class="deliverables-list">
+                    <span class="mono-label"
+                      style="color: var(--text-muted); margin-bottom: 0.25rem;">Deliverables</span>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Site Recce &amp; Technical
+                      Logistics</div>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Structured Shotlists &amp;
+                      Schedules</div>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Risk, Permitting &amp; Safety
+                      Plans</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Capability 3 -->
+          <div class="capability-item">
+            <button class="capability-header" aria-expanded="false">
+              <div class="capability-header__left">
+                <span class="capability-index">03</span>
+                <span class="capability-title">FILM AND PHOTOGRAPHY</span>
+              </div>
+              <svg class="capability-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="capability-body">
+              <div class="capability-body__inner">
+                <div class="capability-detail-grid">
+                  <div>
+                    <p class="capability-summary">
+                      Capturing places, processes, products and people in service of the story.
+                    </p>
+                  </div>
+                  <div class="deliverables-list">
+                    <span class="mono-label"
+                      style="color: var(--text-muted); margin-bottom: 0.25rem;">Deliverables</span>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Cinema Cinematography (4K / Raw)
+                    </div>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Architectural &amp; Industrial
+                      Stills</div>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Authentic Documentary Coverage
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Capability 4 -->
+          <div class="capability-item">
+            <button class="capability-header" aria-expanded="false">
+              <div class="capability-header__left">
+                <span class="capability-index">04</span>
+                <span class="capability-title">AERIAL VISUALS</span>
+              </div>
+              <svg class="capability-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="capability-body">
+              <div class="capability-body__inner">
+                <div class="capability-detail-grid">
+                  <div>
+                    <p class="capability-summary">
+                      Drone perspectives where they add context or scale, subject to permissions and operational
+                      requirements.
+                    </p>
+                  </div>
+                  <div class="deliverables-list">
+                    <span class="mono-label"
+                      style="color: var(--text-muted); margin-bottom: 0.25rem;">Deliverables</span>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Licensed UAV Drone Operations
+                    </div>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Macro Infrastructure &amp; Site
+                      Scale</div>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> High-Altitude Kinetic Tracking
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Capability 5 -->
+          <div class="capability-item">
+            <button class="capability-header" aria-expanded="false">
+              <div class="capability-header__left">
+                <span class="capability-index">05</span>
+                <span class="capability-title">POST-PRODUCTION</span>
+              </div>
+              <svg class="capability-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+            <div class="capability-body">
+              <div class="capability-body__inner">
+                <div class="capability-detail-grid">
+                  <div>
+                    <p class="capability-summary">
+                      Editing, sound, graphics and titles, plus adapting the final material for different formats and
+                      audiences.
+                    </p>
+                  </div>
+                  <div class="deliverables-list">
+                    <span class="mono-label"
+                      style="color: var(--text-muted); margin-bottom: 0.25rem;">Deliverables</span>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Editorial Storycraft &amp;
+                      Pacing</div>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Sound Design, Foley &amp;
+                      Mastering</div>
+                    <div class="deliverable-item"><span class="deliverable-dot"></span> Technical Motion Graphics &amp;
+                      Multi-Platform Master Exports</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Capability Statement & Direct CTA Banner -->
+        <div class="capabilities-footer-banner reveal-on-scroll">
+          <p class="capabilities-footer-text">
+            “Engage us for a single production need, or bring us in earlier, while the story is still taking shape. Most
+            projects use only part of this list. We recommend the combination that fits.”
+          </p>
+          <a href="#enquiry" class="btn btn-primary">
+            <span>Enquire on Capabilities</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. SECTION: THE SPATIAL PERSPECTIVE MATRIX (SCALE ARCHITECTURE) -->
+    <section id="spatial-matrix" class="site-section spatial-matrix-section">
+      <div class="section-watermark">09</div>
+      <div class="site-container">
+
+        <div class="spatial-matrix-header reveal-on-scroll">
+          <span class="category-tag">08 / Scale Architecture</span>
+          <h2 class="section-headline">
+            From microscopic tolerance to monumental scale.
+          </h2>
+          <p class="lead-text" style="margin-top: 1.25rem;">
+            Visual intelligence requires choosing the right elevation for the message. We work across three spatial
+            dimensions, connecting the precision of individual decisions to the overall context of the project.
+          </p>
+        </div>
+
+        <div class="spatial-matrix-grid">
+
+          <!-- Interactive Tier Viewer -->
+          <div class="spatial-viewer-container reveal-on-scroll">
+            <div class="spatial-viewer-frame" data-inspectable data-caption="Spatial Perspective Tier Record"
+              data-meta="35mm / UAV Multi-Tier Matrix">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
+                alt="Macro engineering precision" class="spatial-layer-img is-active" data-tier="macro" loading="lazy">
+
+              <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
+                alt="Human operational craft" class="spatial-layer-img" data-tier="workflow" loading="lazy">
+
+              <img src="https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&fit=crop&w=1200&q=80"
+                alt="Aerial infrastructural perspective" class="spatial-layer-img" data-tier="aerial" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Selectable Tier Cards -->
+          <div class="spatial-tiers-list reveal-on-scroll delay-200">
+
+            <div class="spatial-tier-card is-active" data-tier="macro" tabindex="0">
+              <div class="spatial-tier-header">
+                <span class="spatial-tier-num">01 / TIER</span>
+                <span class="mono-label">Ground Truth</span>
+              </div>
+              <h3 class="spatial-tier-title">MACRO PRECISION</h3>
+              <p class="spatial-tier-desc">
+                Sub-millimeter tolerances, physical material integrity, industrial precision, and tactile methods hidden
+                inside the machinery.
+              </p>
+              <div class="spatial-tier-spec">OPTICAL: 100MM MACRO CINE // RESOLUTION: &lt; 10 MICRONS</div>
+            </div>
+
+            <div class="spatial-tier-card" data-tier="workflow" tabindex="0">
+              <div class="spatial-tier-header">
+                <span class="spatial-tier-num">02 / TIER</span>
+                <span class="mono-label">Human Method</span>
+              </div>
+              <h3 class="spatial-tier-title">OPERATIONAL WORKFLOW</h3>
+              <p class="spatial-tier-desc">
+                Specialists in active motion, procedural decision trees, collaborative execution, and the human
+                intellect guiding physical outcomes.
+              </p>
+              <div class="spatial-tier-spec">OPTICAL: 35MM ANAMORPHIC // 24FPS DYNAMIC CINEMA</div>
+            </div>
+
+            <div class="spatial-tier-card" data-tier="aerial" tabindex="0">
+              <div class="spatial-tier-header">
+                <span class="spatial-tier-num">03 / TIER</span>
+                <span class="mono-label">Spatial Context</span>
+              </div>
+              <h3 class="spatial-tier-title">MONUMENTAL TOPOGRAPHY</h3>
+              <p class="spatial-tier-desc">
+                High-elevation UAV perspectives establishing site footprint, environmental relationships, logistical
+                scale, and regional infrastructure.
+              </p>
+              <div class="spatial-tier-spec">OPTICAL: 6K RAW UAV // 400FT AGL TOPOGRAPHICAL MAPPING</div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 11. SECTION: TECHNICAL PRODUCTION STANDARDS -->
+    <section id="technical-repertoire" class="technical-section">
+      <div class="section-watermark">10</div>
+      <div class="site-container">
+
+        <div class="technical-header reveal-on-scroll">
+          <span class="category-tag category-tag--inverse">09 / Production Standards</span>
+          <h2 class="section-headline" style="color: #FFFFFF;">
+            Engineered for clarity. Mastered for longevity.
+          </h2>
+          <p class="lead-text" style="color: var(--text-inverse-muted); margin-top: 1.25rem;">
+            Our technical operational standards are designed to eliminate visual noise and deliver enduring clarity
+            across all platforms.
+          </p>
+        </div>
+
+        <div class="technical-grid">
+
+          <div class="tech-spec-card reveal-on-scroll">
+            <span class="tech-spec-code">SPEC 01 // CINE</span>
+            <h3 class="tech-spec-title">Large-Format Monochrome Cine</h3>
+            <p class="tech-spec-body">
+              16+ stop dynamic range sensors paired with custom anamorphic prime glass, eliminating chromatic
+              distractions to focus entirely on light, geometry, and structural motion.
+            </p>
+            <span class="tech-spec-tag">DCI 4K/6K Raw Workflows</span>
+          </div>
+
+          <div class="tech-spec-card reveal-on-scroll delay-100">
+            <span class="tech-spec-code">SPEC 02 // AERIAL</span>
+            <h3 class="tech-spec-title">Licensed UAV Drone Operations</h3>
+            <p class="tech-spec-body">
+              Dual-operator heavy-lift and sub-250g micro-drone platforms certified for complex industrial facilities,
+              high-wind coastal infrastructure, and confined interior spaces.
+            </p>
+            <span class="tech-spec-tag">CAA / FAA Licensed Operations</span>
+          </div>
+
+          <div class="tech-spec-card reveal-on-scroll delay-200">
+            <span class="tech-spec-code">SPEC 03 // ACOUSTICS</span>
+            <h3 class="tech-spec-title">Ambisonic Sound Architecture</h3>
+            <p class="tech-spec-body">
+              Specialized contact microphones, binaural field recording, and industrial Foley mastering that conveys the
+              visceral acoustic texture of real physical operations.
+            </p>
+            <span class="tech-spec-tag">Spatial &amp; Stereo Mastering</span>
+          </div>
+
+          <div class="tech-spec-card reveal-on-scroll delay-300">
+            <span class="tech-spec-code">SPEC 04 // PIPELINE</span>
+            <h3 class="tech-spec-title">12-Bit ACES Log Archiving</h3>
+            <p class="tech-spec-body">
+              End-to-end ACES color-managed pipeline guaranteeing exact tonal consistency from field monitors to
+              stakeholder boardroom displays and museum-grade projections.
+            </p>
+            <span class="tech-spec-tag">Multi-Ratio Master Archiving</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 12. SECTION: ABOUT AVION -->
+    <section id="about" class="site-section site-section--border-bottom">
+      <div class="section-watermark">11</div>
+      <div class="site-container">
+
+        <div class="about-grid">
+
+          <div class="about-content reveal-on-scroll">
+            <span class="category-tag">10 / Studio Profile</span>
+            <h2 class="section-headline" style="margin-bottom: 2rem;">
+              A studio built around the thinking behind the image.
+            </h2>
+            <div class="about-body">
+              <p>
+                Avion Visual Intelligence rests on one belief: visual communication works better when clear thinking
+                guides the creative execution.
+              </p>
+              <p>
+                We work where strategy, narrative and production meet, helping organisations find the story in their
+                work and turn it into visuals people understand. We don’t make content for the sake of having content.
+                Everything we produce has a purpose.
+              </p>
+            </div>
+
+            <div class="about-pillars">
+              <div class="pillar-card">
+                <span class="pillar-label">Our Ambition</span>
+                <p class="pillar-text">
+                  “To be the trusted visual communication partner for organisations whose work deserves to be
+                  understood.”
+                </p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-label">Our Working Principle</span>
+                <p class="pillar-text">
+                  “Think clearly. Tell the story. Execute with purpose.”
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-visual reveal-on-scroll delay-200">
+            <div class="about-visual-frame" data-inspectable data-caption="Avion Studio Archive — The Camera in Motion"
+              data-meta="Cinematography Unit">
+              <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80"
+                alt="Cinematographer framing perspective in natural monochrome light" class="about-visual-img"
+                loading="lazy" decoding="async" width="1200" height="1500"
+                onerror="this.src='assets/images/fallback.svg'">
+              <div class="about-visual-badge">Avion Studio Archive</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 13. SECTION: START A PROJECT -->
+    <section id="enquiry" class="site-section site-section--secondary">
+      <div class="section-watermark">12</div>
+      <div class="site-container">
+
+        <div class="enquiry-container">
+
+          <div class="enquiry-header reveal-on-scroll">
+            <span class="category-tag">11 / Initiate Dialogue</span>
+            <h2 class="section-headline">
+              Tell us what people need to understand.
+            </h2>
+            <p class="lead-text" style="margin-top: 1.25rem;">
+              A project to document, a process to explain, a product to introduce, an idea that needs a stronger story:
+              start there. You don’t need a finished brief.
+            </p>
+          </div>
+
+          <!-- Wizard Progress Steps -->
+          <div class="form-wizard-progress" role="tablist" aria-label="Project Brief Progress">
+            <div class="progress-step is-active" data-step-target="1" role="tab" tabindex="0">
+              <span>01. Contact</span>
+              <div class="progress-step__bar"></div>
+            </div>
+            <div class="progress-step" data-step-target="2" role="tab" tabindex="0">
+              <span>02. Challenge</span>
+              <div class="progress-step__bar"></div>
+            </div>
+            <div class="progress-step" data-step-target="3" role="tab" tabindex="0">
+              <span>03. Review</span>
+              <div class="progress-step__bar"></div>
+            </div>
+          </div>
+
+          <!-- Interactive Form Element -->
+          <form id="project-enquiry-form" class="enquiry-form" novalidate>
+
+            <!-- STEP 1: CONTACT DETAILS & PROJECT SCOPE FOCUS -->
+            <div class="form-step-panel is-visible" data-step="1">
+
+              <span class="mono-label" style="display: block; margin-bottom: 0.75rem; color: var(--text-muted);">
+                Select Focus Areas (Optional)
+              </span>
+              <div class="scope-chips" aria-label="Project Scope Selection">
+                <button type="button" class="scope-chip" data-scope="Complex Systems">Complex Systems</button>
+                <button type="button" class="scope-chip" data-scope="Infrastructure">Infrastructure</button>
+                <button type="button" class="scope-chip" data-scope="Industrial Craft">Industrial Craft</button>
+                <button type="button" class="scope-chip" data-scope="Brand Narrative">Brand Narrative</button>
+                <button type="button" class="scope-chip" data-scope="Aerial Survey">Aerial Survey</button>
+              </div>
+
+              <div class="form-field-group">
+                <label for="enquiry-name" class="field-label">
+                  Your Name <span class="required-mark">*</span>
+                </label>
+                <input type="text" id="enquiry-name" name="name" class="text-input"
+                  placeholder="e.g. Katherine Sterling" required autocomplete="name">
+                <div class="error-message">Please enter your name.</div>
+              </div>
+
+              <div class="form-field-group">
+                <label for="enquiry-org" class="field-label">
+                  Organisation <span class="required-mark">*</span>
+                </label>
+                <input type="text" id="enquiry-org" name="organisation" class="text-input"
+                  placeholder="e.g. Sterling Infrastructure Labs" required autocomplete="organization">
+                <div class="error-message">Please enter your organisation.</div>
+              </div>
+
+              <div class="form-field-group">
+                <label for="enquiry-contact" class="field-label">
+                  Email or Phone <span class="required-mark">*</span>
+                </label>
+                <input type="text" id="enquiry-contact" name="contact" class="text-input"
+                  placeholder="name@organisation.com or +44 20 7946 0912" required autocomplete="email tel">
+                <p class="field-helper">We use this exclusively to reply directly regarding your brief.</p>
+                <div class="error-message">Please provide a valid email or phone number.</div>
+              </div>
+
+            </div>
+
+            <!-- STEP 2: THE COMMUNICATION CHALLENGE -->
+            <div class="form-step-panel" data-step="2">
+
+              <div class="form-field-group">
+                <label for="enquiry-working-on" class="field-label">
+                  What are you working on? <span class="required-mark">*</span>
+                </label>
+                <textarea id="enquiry-working-on" name="working_on" class="text-area"
+                  placeholder="Describe the project, industrial site, facility, technology, or initiative..."
+                  required></textarea>
+                <p class="field-helper">A high-level summary is sufficient.</p>
+                <div class="error-message">Please describe what you are working on.</div>
+              </div>
+
+              <div class="form-field-group">
+                <label for="enquiry-communicate" class="field-label">
+                  What do you need to communicate? <span class="required-mark">*</span>
+                </label>
+                <textarea id="enquiry-communicate" name="communicate" class="text-area"
+                  placeholder="Who is the audience (investors, public, internal teams), and what must they understand or feel?"
+                  required></textarea>
+                <div class="error-message">Please outline what needs to be communicated.</div>
+              </div>
+
+            </div>
+
+            <!-- STEP 3: TIMELINE & REVIEW -->
+            <div class="form-step-panel" data-step="3">
+
+              <div class="form-field-group">
+                <label for="enquiry-deadline" class="field-label">
+                  Deadline or Planned Production Date (Optional)
+                </label>
+                <input type="text" id="enquiry-deadline" name="deadline" class="text-input"
+                  placeholder="e.g. Q3 2026 / Prior to October launch">
+                <p class="field-helper">Leave empty if timeline is flexible or yet to be determined.</p>
+              </div>
+
+              <!-- Live Form Review Panel -->
+              <div class="enquiry-review-card">
+                <h4 class="enquiry-review-title">Summary of Information</h4>
+
+                <div class="review-item">
+                  <span class="review-label">Name</span>
+                  <span class="review-val" id="review-name">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-label">Organisation</span>
+                  <span class="review-val" id="review-org">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-label">Contact</span>
+                  <span class="review-val" id="review-contact">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-label">Selected Scope</span>
+                  <span class="review-val" id="review-scope">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-label">What You’re Working On</span>
+                  <span class="review-val" id="review-working-on">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-label">What Needs to be Communicated</span>
+                  <span class="review-val" id="review-communicate">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-label">Target Date</span>
+                  <span class="review-val" id="review-deadline">—</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Wizard Navigation Action Buttons -->
+            <div class="form-actions">
+              <button type="button" id="form-prev-btn" class="btn btn-secondary" style="display: none;">
+                <span>← Previous</span>
+              </button>
+
+              <div style="margin-left: auto; display: flex; gap: 1rem;">
+                <button type="button" id="form-next-btn" class="btn btn-primary">
+                  <span>Continue →</span>
+                </button>
+                <button type="submit" id="form-submit-btn" class="btn btn-primary" style="display: none;">
+                  <span>Submit Project Enquiry</span>
+                </button>
+              </div>
+            </div>
+
+          </form>
+
+          <!-- Honest Demo-Mode Submission Outcome State -->
+          <div id="submission-state" class="submission-state" role="status" aria-live="polite">
+            <span class="state-badge">Enquiry Structured</span>
+            <h3 class="state-title">Your brief has been compiled.</h3>
+            <p class="state-text">
+              Thank you for articulating your communication challenge. Because this website runs as an honest
+              frontend-only prototype without an active server backend, enquiries are not stored in a persistent
+              database.
+            </p>
+
+            <div class="demo-adapter-box">
+              <h4 class="demo-adapter-header">Frontend Adapter Active</h4>
+              <p class="demo-adapter-note">
+                You can immediately launch an email draft with your client or copy the formatted brief to your clipboard
+                to send to the Avion team directly.
+              </p>
+            </div>
+
+            <div class="state-actions">
+              <a href="#" id="open-email-draft-btn" class="btn btn-primary">
+                <span>Open Pre-filled Email Draft ↗</span>
+              </a>
+              <button type="button" id="copy-brief-btn" class="btn btn-secondary">
+                <span>Copy Formatted Brief 📋</span>
+              </button>
+              <button type="button" id="reset-form-btn" class="btn btn-secondary">
+                <span>Start New Enquiry</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-container">
+
+      <div class="footer-top">
+
+        <!-- Column 1: Studio Brand & Motto -->
+        <div class="footer-brand">
+          <a href="#hero" class="footer-brand__link" aria-label="Avion Visual Intelligence Home">
+            <img src="assets/images/logo-light.png"
+              srcset="assets/images/logo-light.png 1x, assets/images/logo-light@2x.png 2x"
+              alt="Avion Visual Intelligence" class="footer-brand__logo" width="170" height="100" loading="lazy"
+              decoding="async">
+          </a>
+          <p class="footer-brand__tagline">“Strategy. Story. Production.”</p>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div>
+          <h4 class="footer-col__title">Navigation</h4>
+          <nav class="footer-nav" aria-label="Footer Navigation">
+            <a href="#hero" class="footer-nav__link">Home</a>
+            <a href="#how-we-think" class="footer-nav__link">How We Think</a>
+            <a href="#capabilities" class="footer-nav__link">Capabilities</a>
+            <a href="#spatial-archive" class="footer-nav__link">Spatial Archive</a>
+            <a href="#about" class="footer-nav__link">About Avion</a>
+            <a href="#enquiry" class="footer-nav__link">Start a Project</a>
+          </nav>
+        </div>
+
+        <!-- Column 3: Studio Contact Dialogue -->
+        <div>
+          <h4 class="footer-col__title">Studio Inquiries</h4>
+          <div class="footer-config-info">
+            <p>Direct project enquiries are welcomed through our project dialogue form.</p>
+            <a href="#enquiry" class="btn btn-secondary"
+              style="padding: 0.65rem 1.25rem; font-size: 0.725rem; margin-top: 0.5rem; display: inline-flex;">
+              <span>Initiate Dialogue →</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom: Dynamic Copyright & Back to Top -->
+      <div class="footer-bottom">
+        <div>
+          <span>&copy; <span id="current-year">2026</span> Avion Visual Intelligence. All rights reserved.</span>
+        </div>
+        <div>
+          <a href="#hero" id="back-to-top" class="back-to-top" aria-label="Back to top of page">
+            <span>Top</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
